@@ -1,0 +1,28 @@
+{
+    "name": "monosolutions/omnipay-saferpay",
+    "type": "library",
+    "description": "Saferpay driver for the Omnipay payment processing library",
+    "homepage": "https://github.com/monosolutions/omnipay-saferpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ionut Paraschiv",
+            "email": "ionupara@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Saferpay\\" : "src/" }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
