@@ -45,6 +45,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     protected function sendRequest($uri, $data)
     {
+
         $url = "{$this->getEndpoint()}{$uri}";
         $postData = $this->getData();
         $headers = [
