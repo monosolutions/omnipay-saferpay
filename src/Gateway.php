@@ -39,6 +39,17 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * Create an cancel request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Saferpay\Message\CancelRequest
+     */
+    public function cancel(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\Saferpay\Message\CancelRequest', $parameters);
+    }
+
+    /**
      * Create an assertion request.
      *
      * @param array $parameters

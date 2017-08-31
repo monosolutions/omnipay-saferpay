@@ -60,4 +60,18 @@ class GatewayTest extends GatewayTestCase
         $this->assertInstanceOf('Omnipay\Saferpay\Message\AssertRequest', $request);
         $this->assertEquals('transactionToken', $request->getData()['Token']);
     }
+
+    public function testCancelSuccess()
+    {
+        $this->options = [
+            'customerId' => 'nothing',
+            'testMode' => true,
+            'transactionId' => 'testtransaction'
+        ];
+
+        $request = $this->gateway->cancel($this->options);
+        $this->assertInstanceOf('Omnipay\Saferpay\Message\CancelRequest', $request);
+        $this->assertEquals(['TransactionId'=>'testtransaction'], $request->getData()['TransactionReference']);
+    }
+
 }
