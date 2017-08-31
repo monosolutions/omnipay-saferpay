@@ -12,8 +12,12 @@ use Omnipay\Common\Message\RedirectResponseInterface;
  *
  * @see \Omnipay\Saferpay\Gateway
  */
-class CaptureResponse extends AbstractResponse
+class AssertResponse extends AbstractResponse
 {
+    public function isRedirect()
+    {
+        return false;
+    }
     public function isSuccessful()
     {
         return true;

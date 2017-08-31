@@ -28,7 +28,7 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * Create an authorize request.
+     * Create an capture request.
      *
      * @param array $parameters
      * @return \Omnipay\Saferpay\Message\CaptureRequest
@@ -36,6 +36,17 @@ class Gateway extends AbstractGateway
     public function capture(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Saferpay\Message\CaptureRequest', $parameters);
+    }
+
+    /**
+     * Create an assertion request.
+     *
+     * @param array $parameters
+     * @return \Omnipay\Saferpay\Message\AssertRequest
+     */
+    public function assert(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\Saferpay\Message\AssertRequest', $parameters);
     }
 
     /**
